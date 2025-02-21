@@ -1,2 +1,2 @@
 # neighborhood-map-filter
-~Current Version:1.0~
+~Current Version:1.1~

@@ -43,6 +43,9 @@ function nmf_register_settings() {
     register_setting('nmf_options_group', 'nmf_map_center_info_box_title');
     register_setting('nmf_options_group', 'nmf_map_center_info_box_contents');
     register_setting('nmf_options_group', 'nmf_default_color');
+    register_setting('nmf_options_group', 'nmf_default_active_color');
+    register_setting('nmf_options_group', 'nmf_grid_default_color');
+    register_setting('nmf_options_group', 'nmf_grid_default_active_color');
 
     // Add a section for the settings page
     add_settings_section(
@@ -133,6 +136,30 @@ function nmf_register_settings() {
         'nmf_plugin_settings',          // Page slug
         'nmf_section'            // Section ID
     );
+    //Active Color
+    add_settings_field(
+        'nmf_default_active_color',          // Field ID
+        'Active Color',                 // Field Title
+        'nmf_default_active_color_callback', // Callback function
+        'nmf_plugin_settings',          // Page slug
+        'nmf_section'            // Section ID
+    );
+    //Grid Default Color
+    add_settings_field(
+        'nmf_grid_default_color',          // Field ID
+        'Grid Background Color',                 // Field Title
+        'nmf_grid_default_color_callback', // Callback function
+        'nmf_plugin_settings',          // Page slug
+        'nmf_section'            // Section ID
+    );
+    //Grid Default Active Color
+    add_settings_field(
+        'nmf_grid_default_active_color',          // Field ID
+        'Map Infocontent Active Color',                 // Field Title
+        'nmf_grid_default_active_color_callback', // Callback function
+        'nmf_plugin_settings',          // Page slug
+        'nmf_section'            // Section ID
+    );
     
 }
 add_action('admin_init', 'nmf_register_settings');
@@ -193,6 +220,27 @@ function nmf_default_color_callback() {
     $value = get_option('nmf_default_color', '');
     // Display the input field
     echo '<input type="text" id="nmf_default_color" name="nmf_default_color" value="' . esc_attr($value) . '" class="my-color-field" />';
+    echo '<div style="background-color: ' . esc_attr($value) . '; width: 100px; height: 100px;"></div>';
+}
+function nmf_default_active_color_callback() {
+    // Get the current value of the option
+    $value = get_option('nmf_default_active_color', '');
+    // Display the input field
+    echo '<input type="text" id="nmf_default_active_color" name="nmf_default_active_color" value="' . esc_attr($value) . '" class="my-color-field" />';
+    echo '<div style="background-color: ' . esc_attr($value) . '; width: 100px; height: 100px;"></div>';
+}
+function nmf_grid_default_color_callback() {
+    // Get the current value of the option
+    $value = get_option('nmf_grid_default_color', '');
+    // Display the input field
+    echo '<input type="text" id="nmf_grid_default_color" name="nmf_grid_default_color" value="' . esc_attr($value) . '" class="my-color-field" />';
+    echo '<div style="background-color: ' . esc_attr($value) . '; width: 100px; height: 100px;"></div>';
+}
+function nmf_grid_default_active_color_callback() {
+    // Get the current value of the option
+    $value = get_option('nmf_grid_default_active_color', '');
+    // Display the input field
+    echo '<input type="text" id="nmf_grid_default_active_color" name="nmf_grid_default_active_color" value="' . esc_attr($value) . '" class="my-color-field" />';
     echo '<div style="background-color: ' . esc_attr($value) . '; width: 100px; height: 100px;"></div>';
 }
 

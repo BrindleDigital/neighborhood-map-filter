@@ -42,8 +42,8 @@ button:hover,.btn_type.active{
 }
 .info-window-content .close-btn {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 7px;
+    right: 10px;
     font-size: 20px;
     cursor: pointer;
     color: var(--info-content-color);
@@ -89,8 +89,8 @@ button:hover,.btn_type.active{
     text-align: center;
 }
 .place-card:hover {
-    background-color: var(--button-color-active);
-    color: var(--button-text-color-active) !important;
+    background-color: var(--button-color);
+    color: var(--button-text-color) !important;
 }
 .place-card h3 {
     margin: 0;
@@ -98,7 +98,7 @@ button:hover,.btn_type.active{
     font-weight: bold;
 }
 .place-card:hover h3 {
-    color: var(--button-text-color-active);
+    color: var(--button-text-color);
 }
 .place-card p {
     margin: 5px 0;

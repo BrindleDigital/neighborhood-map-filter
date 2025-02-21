@@ -11,19 +11,38 @@ for($t=0;$t<count($map_filter_types_array);$t++){
     if($t==0){ 
         $activeType =$type;                
     }
-}?>
+}
+
+$button_color = '#F2F2F2';
+if(get_option('nmf_default_color')){
+    $button_color = get_option('nmf_default_color');  
+}
+$button_color_active = '#EE695A';
+if(get_option('nmf_default_active_color')){
+    $button_color_active = get_option('nmf_default_active_color');  
+}
+$grid_color = '#F2F2F2';
+if(get_option('nmf_grid_default_color')){
+    $grid_color = get_option('nmf_grid_default_color');  
+}
+$grid_active_color = '#EE695A';
+if(get_option('nmf_grid_default_active_color')){
+    $grid_active_color = get_option('nmf_grid_default_active_color');  
+}
+?>
 <style>
     :root {
-      --button-color: #F2F2F2;
+      --button-color: <?php echo $button_color;?>;
       --button-text-color: #000;
-      --button-color-active: #EE695A;
+      --button-color-active: <?php echo $button_color_active;?>;
       --button-text-color-active: #fff;
-      --grid-bg-color:#F2F2F2; 
 
+      --grid-bg-color:<?php echo $grid_color;?>;
       --info-content-bgcolor:#fff; 
       --info-content-color:#000; 
       --info-content-h3-size:22px; 
-      --info-content-hover: #EE695A;         
+      --info-content-hover: <?php echo $grid_active_color;?>;  
+      --info-content-color-active:#fff;        
     }
 
 
