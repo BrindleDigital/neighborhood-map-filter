@@ -57,10 +57,8 @@ if(get_option('nmf_grid_default_active_color')){
 </style>
 <link rel="stylesheet" type="text/css" href="<?php echo NEIGHBORHOOD_ATTRACTIONS_FILTER_URL;?>/template/placemap/show-map.css">
 <script>
-window.initMapDup = function () {
-    //...
-};
-//jQuery(document).ready(function ($) {
+
+
 
 
         var options = {"json_style":[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#dde6e8"},{"visibility":"on"}]}]};
@@ -137,24 +135,15 @@ window.initMapDup = function () {
         }
 
 
-        //initMap();
-
-//}); // End jQuery ready   
 
 
-jQuery(document).ready(function ($) {
-    //initMap();
-   // findNearbyPlaces('<?php echo $activeType;?>','0');
-});     
+     
 </script>
 <script type="text/javascript" src="<?php echo NEIGHBORHOOD_ATTRACTIONS_FILTER_URL;?>/template/placemap/show-map.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_option('nmf_google_api_key');?>&libraries=places,marker&callback=initMapPlace" async defer></script>
 
 
-    
 
-
-<h1>Nearby Search Example</h1>
     <div id="map"></div>
     <div class="button_outer">
         <?php

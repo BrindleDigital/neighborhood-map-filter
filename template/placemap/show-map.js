@@ -1,5 +1,5 @@
 
- //jQuery(document).ready(function ($) {
+
         
 
         // Reset map view to the default location
@@ -124,4 +124,3 @@
             const placesList = document.getElementById("places-list");
             placesList.innerHTML = '';  // Clear all grid items
         }
-//});

@@ -1,9 +1,9 @@
 <?php
 /*
-	Plugin Name: Neighborhood Map Filter Plugin
+	Plugin Name: Neighborhood Map Filter
 	Plugin URI: https://github.com/BrindleDigital/neighborhood-map-filter
 	Description: Just another attractions map with filter using  google place API plugin
-	Version: 1.1
+	Version: 1.2
 	Author: Brindle Digital
 	Author URI: https://brindledigital.com
 
@@ -25,7 +25,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 // Define the version of the plugin
-define( 'NEIGHBORHOOD_ATTRACTIONS_FILTER_VERSION', '1.1' );
+define( 'NEIGHBORHOOD_ATTRACTIONS_FILTER_VERSION', '1.2' );
 
 // Plugin directory
 define( 'NEIGHBORHOOD_ATTRACTIONS_FILTER_URL', plugin_dir_url( __FILE__ ) );
